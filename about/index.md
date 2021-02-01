@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 3
 ---
 
-<img src="../img/coffee-sipping.jpg" style="border-radius: 50%;" alt="" />
+<img src="/img/coffee-sipping.jpg" style="border-radius: 50%;" alt="" />
 
 ## Who am I?
 
