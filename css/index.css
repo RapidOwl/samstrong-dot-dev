@@ -162,7 +162,7 @@ pre {
 .postlist-date,
 .postlist-item:before {
   font-size: 0.8125em; /* 13px /16 */
-  color: var(--darkgray);
+  color: var(--white);
 }
 .postlist-date {
   word-spacing: -0.5px;
