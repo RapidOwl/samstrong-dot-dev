@@ -2,9 +2,7 @@
 title: ASP.Net Core API Endpoints
 description: A modern way to create API endpoints in ASP.Net Core.
 date: 2021-02-01
-tags:
-  - images
-  - optimisation
+tags: dotnetcore
 layout: layouts/post.njk
 ---
 
