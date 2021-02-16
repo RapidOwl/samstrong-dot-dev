@@ -27,8 +27,7 @@ Writing code is a means to an end. That end is solving the problems that stand i
 
 I prefer the simplest approach possible that results in a scalable, extensible and maintainable product, especially when the approach requires no code to be written at all. We're all working to a limited timescale and every problem we side-step is time we get back to work on the next big challenge.
 
-I love coaching and supporting other team members and consider this a critical skill in every developers arsenal. Caring for your colleagues allows you to act as a force-multiplier, helping them improve their own
-skills and optimise their approach while keeping them happy and optimistic.
+I love coaching and supporting other team members and consider this a critical skill in every developers arsenal. Caring for your colleagues allows you to act as a force-multiplier, helping them improve their own skills and optimise their approach while keeping them happy and optimistic.
 
 ## My approach
 
