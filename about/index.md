@@ -7,11 +7,11 @@ eleventyNavigation:
   order: 3
 ---
 
-<img src="/img/coffee-sipping.jpg" style="border-radius: 50%;" alt="" />
-
 ## Who am I?
 
-I'm a full-stack* software developer and team lead based in Nottingham, England, with a passion for reducing friction in back-office applications, who mostly lives in the .Net and JavaScript worlds.
+<img src="/img/coffee-sipping.jpg" style="border-radius: 50%;" alt="" />
+
+I'm a full-stack\* software developer and team lead based in Nottingham, England, with a passion for reducing friction in back-office applications, who mostly lives in the .Net and JavaScript worlds.
 
 <sub>\* I'm comfortable writing server-side and client-side code and spend a non-zero amount of time attempting to cram design skills into my brain.</sub>
 
@@ -76,6 +76,7 @@ Here are a list of job titles I have held that will mean a variety of things dep
 ## Other Interests
 
 In no particular order...
+
 - 🧗‍♂️ Climbing
 - 📚 Reading (fantasy & science fiction)
 - 🌊 Paddleboarding
