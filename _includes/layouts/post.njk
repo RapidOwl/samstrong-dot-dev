@@ -4,7 +4,11 @@ templateClass: tmpl-post
 ---
 <h1>{{ title }}</h1>
 
-<section>
+{% if not emoji %}
+	{% set emoji = "🍨" %}
+{% endif %}
+
+<section data-emoji="{{ emoji }}">
 	{{ content | safe }}
 
 	{# <hr>

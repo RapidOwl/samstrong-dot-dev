@@ -194,8 +194,7 @@ section {
 
 section::before {
   position: absolute;
-  /* content: '✨'; */
-  content: "🍧";
+  content: attr(data-emoji);
   font-size: 28px;
   line-height: 64px;
   text-align: center;

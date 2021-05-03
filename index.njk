@@ -6,7 +6,7 @@ layout: layouts/home.njk
 {# <h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1> #}
 <h1>Latest Posts</h1>
 
-<section>
+<section data-emoji="🍨">
 	{% set postslist = collections.posts | head(-5) %}
 	{% set postslistCounter = collections.posts | length %}
 	{% include "postslist.njk" %}

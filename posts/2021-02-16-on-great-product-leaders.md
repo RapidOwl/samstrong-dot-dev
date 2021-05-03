@@ -1,5 +1,6 @@
 ---
 title: On Great Product Leaders
+emoji: 😎
 description: Adam Nash takes us through how to organise your product work for the better.
 date: 2021-02-16
 tags: product
