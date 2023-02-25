@@ -108,6 +108,8 @@ module.exports = function (eleventyConfig) {
     ghostMode: false,
   });
 
+  eleventyConfig.setServerOptions({ port: 8090 });
+
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
 

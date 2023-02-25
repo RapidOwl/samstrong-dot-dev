@@ -9,7 +9,7 @@ eleventyNavigation:
 
 ## Who am I?
 
-<img src="/img/coffee-sipping.jpg" style="border-radius: 50%;" alt="" />
+<div class="text-center"><img src="/img/coffee-sipping.jpg" style="border-radius: 50%;" alt="" /></div>
 
 I'm a full-stack\* software developer and team lead based in Nottingham, England, with a passion for reducing friction in back-office applications, who mostly lives in the .Net and JavaScript worlds.
 
@@ -83,4 +83,4 @@ In no particular order...
 - 🍕 Eating
 - 🍳 Cooking
 - 🕹 Video games
-- ⌨ Writing (fantasy & science fiction)
+- 🧾 Writing (fantasy & science fiction)

@@ -30,12 +30,14 @@ body {
 
 header {
   background: var(--raspberry-pink);
+  border-top: 4px solid var(--raspberry-pink-highlight);
   border-bottom: 4px solid var(--raspberry-pink-highlight);
 }
 
 footer {
   background: var(--raspberry-pink);
   border-top: 4px solid var(--raspberry-pink-highlight);
+  border-bottom: 4px solid var(--raspberry-pink-highlight);
   text-align: center;
   margin-top: auto;
 }
@@ -92,10 +94,35 @@ h1 {
 
 h2 {
   font-size: 2rem;
+
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 1.6rem;
+}
+
+h2, h3 {
+  position: relative;
+}
+
+h2::before, h3::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 2px);
+  width: 100%;
+  left: -0.5px;
+  background: linear-gradient(90deg, var(--raspberry-pink), var(--mint-green) 75%);
+}
+
+h2::before {
+  height: 5px;
+  border-radius: 5px;
+}
+
+h3::before {
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--raspberry-pink-highlight), var(--mint-green) 75%);
 }
 
 h4 {
@@ -116,7 +143,7 @@ ul {
 }
 
 main li {
-  margin: 0 0 16px 16px;
+  margin: 0 0 8px 16px;
 }
 
 main h2 > a,
@@ -130,11 +157,16 @@ main h3:hover > a {
   display: inline;
 }
 
-p,
-li {
+main p,
+main li {
   /* Creates a new stacking context to allow the a::before to work */
   position: relative;
   z-index: 1;
+  font-size: 1.1rem;
+}
+
+main p sub {
+  font-size: 1rem;
 }
 
 main p a,
@@ -169,6 +201,10 @@ main li a:hover::before {
 a[target="_blank"]::after {
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
   margin: 0 3px 0 5px;
+}
+
+img {
+  border: 4px solid var(--mint-green-highlight);
 }
 
 section {
@@ -250,6 +286,10 @@ pre {
 
 .closing-link {
   margin-top: 32px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 @media (max-width: 732px) {
