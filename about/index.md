@@ -17,11 +17,13 @@ I'm a full-stack\* software developer and team lead based in Nottingham, England
 
 ## I believe in
 
-- ✨ Cross-functional teams
-- 🎭 Working through others
-- 🧙‍♂️ Doing more by doing less
-- ⏱ Shipping small and shipping often
-- 🎆 Iterating to success
+<ul class="list-style-none">
+  <li>✨ Cross-functional teams</li>
+  <li>🎭 Working through others</li>
+  <li>🧙‍♂️ Doing more by doing less</li>
+  <li>⏱ Shipping small and shipping often</li>
+  <li>🎆 Iterating to success</li>
+</ul>
 
 Writing code is a means to an end. That end is solving the problems that stand in the way of my employer achieving their goals.
 
@@ -77,10 +79,12 @@ Here are a list of job titles I have held that will mean a variety of things dep
 
 In no particular order...
 
-- 🧗‍♂️ Climbing
-- 📚 Reading (fantasy & science fiction)
-- 🌊 Paddleboarding
-- 🍕 Eating
-- 🍳 Cooking
-- 🕹 Video games
-- 🧾 Writing (fantasy & science fiction)
+<ul class="list-style-none">
+  <li>🧗‍♂️ Climbing</li>
+  <li>📚 Reading (fantasy & science fiction)</li>
+  <li>🌊 Paddleboarding</li>
+  <li>🍕 Eating</li>
+  <li>🍳 Cooking</li>
+  <li>🕹 Video games</li>
+  <li>🧾 Writing (fantasy & science fiction)</li>
+</ul>

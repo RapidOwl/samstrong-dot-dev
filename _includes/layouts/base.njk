@@ -25,11 +25,9 @@
                     <a href="/" aria-label="Home">{{ metadata.title }}</a>
                 </li>
                 <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
-                {%- for entry in collections.all | eleventyNavigation %}
-
+                    {%- for entry in collections.all | eleventyNavigation %}
                         <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-                
-                {%- endfor %}
+                    {%- endfor %}
                 </li>
             </ul>
         </header>
@@ -41,5 +39,24 @@
             <a rel="me" href="https://hachyderm.io/@SamStrong" target="_blank">Mastodon</a>
         </footer>
         <!-- Current page: {{ page.url | url }} -->
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const callback = (entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("seen");
+                            observer.unobserve(entry.target);
+                        }
+                    })
+                };
+
+                const headingObserver = new IntersectionObserver(callback, { });
+
+                document.querySelectorAll('h2, h3').forEach((heading) => {
+                    headingObserver.observe(heading);
+                });            
+            });
+        </script>
     </body>
 </html>

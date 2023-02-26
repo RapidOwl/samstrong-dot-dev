@@ -101,30 +101,6 @@ h3 {
   font-size: 1.6rem;
 }
 
-h2, h3 {
-  position: relative;
-}
-
-h2::before, h3::before {
-  content: "";
-  position: absolute;
-  top: calc(100% + 2px);
-  width: 100%;
-  left: -0.5px;
-  background: linear-gradient(90deg, var(--raspberry-pink), var(--mint-green) 75%);
-}
-
-h2::before {
-  height: 5px;
-  border-radius: 5px;
-}
-
-h3::before {
-  height: 3px;
-  border-radius: 3px;
-  background: linear-gradient(90deg, var(--raspberry-pink-highlight), var(--mint-green) 75%);
-}
-
 h4 {
   font-size: 1.5rem;
 }
@@ -141,6 +117,41 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+/* ## Styles for heading underlines ## */
+
+h2, h3 {
+  position: relative;
+}
+
+h2::before, h3::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 2px);
+  width: 50%;
+  left: -0.5px;
+  background: linear-gradient(90deg, var(--raspberry-pink), var(--mint-green) 75%);
+  opacity: 0;
+}
+
+h2::before {
+  height: 5px;
+  border-radius: 5px;
+}
+
+h3::before {
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--raspberry-pink-highlight), var(--mint-green) 75%);
+}
+
+h2.seen::before, h3.seen::before {
+  opacity: 1;
+  width: 100%;
+  transition: all 0.75s ease-in-out;
+}
+
+/* ## main-specific styles ## */
 
 main li {
   margin: 0 0 8px 16px;
@@ -244,7 +255,7 @@ pre {
   border: 4px solid var(--raspberry-pink);
   border-radius: 12px;
   padding: 16px;
-  background: var(--raspberry-pink-highlight);
+  background: var(--mint-green-highlight);
   tab-size: 4;
   overflow-x: auto;
 }
@@ -290,6 +301,14 @@ pre {
 
 .text-center {
   text-align: center;
+}
+
+.list-style-none {
+  list-style-type: none;
+}
+
+.list-style-none li {
+  margin-left: 0;
 }
 
 @media (max-width: 732px) {
