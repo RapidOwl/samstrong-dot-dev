@@ -260,6 +260,14 @@ pre {
   overflow-x: auto;
 }
 
+pre[class*="language-"] {
+  padding: 16px;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  background: var(--mint-green-highlight);
+}
+
 .eleventy-plugin-youtube-embed {
   margin-bottom: 16px;
 }

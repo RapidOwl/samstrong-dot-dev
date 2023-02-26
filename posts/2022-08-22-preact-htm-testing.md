@@ -17,13 +17,13 @@ I knew Preact was a tiny library that shared a lot of APIs with React, but it wa
 
 Instead of the standard module imports, you can import from a CDN like so:
 
-```
+```js
 import { html, render } from 'https://unpkg.com/htm/preact/index.mjs?module';
 ```
 
 You can then write your components like this:
 
-```
+```js
 function Result({url, alt, description}) {
 	return html`
 		<img src=${props.url} alt=${props.alt} />
@@ -56,13 +56,30 @@ In order to make this work, we need to solve a few problems:
 
 We import our dependencies like this:
 
-`import { html } from 'https://unpkg.com/htm/preact/index.mjs?module';`
+```js
+import { html } from 'https://unpkg.com/htm/preact/index.mjs?module';
+```
 
 But Vitest requires us to import our dependencies like this:
 
-`import { html } from 'htm/preact';`
+```js
+import { html } from 'htm/preact';
+```
 
 So when we import the JavaScript file that contains our components and Vitest encounters a CDN style import it errors and the test fails. Enter Resolve Aliases. Vitest supports the aliasing of strings for module imports. This is intended to let you replace things like `'./../../../../src/thing.js'` with `'@/src/thing.js'`, but it doesn't matter what string you use it to replace.
+
+In your `vite.config.js`, the object you pass into `defineConfig` would include a resolve property similar to this:
+
+```js
+resolve: {
+	alias: [
+		{
+			find: 'https://unpkg.com/htm/preact/index.mjs?module',
+			replacement: 'htm/preact'
+		}
+	]
+}
+```
 
 ### A Browser Like Environment
 
@@ -76,7 +93,7 @@ What this means is we can use it as a fake browser to test our components.
 
 Vitest uses the same config file as Vite. Create a file called `vite.config.js` in the root of your project and populate it as below.
 
-```
+```js
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
@@ -104,7 +121,7 @@ The first section of the config tells Vitest to use jsdom as its test environmen
 
 Once we've got everything set up, we can write tests like this example:
 
-```
+```js
 import { render } from '@testing-library/preact';
 import { describe, expect, test } from 'vitest';
 
@@ -126,4 +143,3 @@ describe('Result', () => {
 	});
 });
 ```
-
