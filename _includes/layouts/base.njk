@@ -12,10 +12,11 @@
         </title>
         <meta name="description" content="{{ description or metadata.description }}">
         <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+        <link rel="stylesheet" href="{{ '/css/prism-coldark-cold.css' | url }}">
         <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-        <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
         <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
         <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+        <link rel="preload" href="/fonts/lobster-font-latin.woff2" as="font" type="font/woff2" crossorigin>
     </head>
     <body>
         <header>
@@ -25,11 +26,9 @@
                     <a href="/" aria-label="Home">{{ metadata.title }}</a>
                 </li>
                 <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
-                {%- for entry in collections.all | eleventyNavigation %}
-
+                    {%- for entry in collections.all | eleventyNavigation %}
                         <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-                
-                {%- endfor %}
+                    {%- endfor %}
                 </li>
             </ul>
         </header>
@@ -41,5 +40,24 @@
             <a rel="me" href="https://hachyderm.io/@SamStrong" target="_blank">Mastodon</a>
         </footer>
         <!-- Current page: {{ page.url | url }} -->
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const callback = (entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("seen");
+                            observer.unobserve(entry.target);
+                        }
+                    })
+                };
+
+                const headingObserver = new IntersectionObserver(callback, { });
+
+                document.querySelectorAll('h2, h3').forEach((heading) => {
+                    headingObserver.observe(heading);
+                });            
+            });
+        </script>
     </body>
 </html>

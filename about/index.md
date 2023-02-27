@@ -9,7 +9,9 @@ eleventyNavigation:
 
 ## Who am I?
 
-<img src="/img/coffee-sipping.jpg" style="border-radius: 50%;" alt="" />
+<div class="text-center round-image-wrapper">
+  {% image "../img/coffee-sipping.jpg" "Sam drinking coffee. The mug obscures the lower half of his face." %}
+</div>
 
 I'm a full-stack\* software developer and Tech Lead based in Nottingham, who spends most of his time in the .Net and JavaScript worlds, but is extremely passionate about CSS in general.
 
@@ -17,11 +19,13 @@ I'm a full-stack\* software developer and Tech Lead based in Nottingham, who spe
 
 ## I believe in
 
-- ✨ Cross-functional teams
-- 🎭 Working through others
-- 🧙‍♂️ Doing more by doing less
-- ⏱ Shipping small and shipping often
-- 🎆 Iterating to success
+<ul class="list-style-none">
+  <li>✨ Cross-functional teams</li>
+  <li>🎭 Working through others</li>
+  <li>🧙‍♂️ Doing more by doing less</li>
+  <li>⏱ Shipping small and shipping often</li>
+  <li>🎆 Iterating to success</li>
+</ul>
 
 Writing code is a means to an end. That end is solving the problems that stand in the way of my employer achieving their goals. Writing code is also expensive so we should always make sure we're building the right thing, in the right way at the right time.
 
@@ -77,8 +81,12 @@ Here are a list of job titles I have held that will mean a variety of things dep
 
 In no particular order...
 
-- 📚 Reading (fantasy & science fiction)
-- 🍕 Eating
-- 🍳 Cooking
-- 🕹 Video games
-- ⌨ Writing (fantasy & science fiction)
+<ul class="list-style-none">
+  <li>🧗‍♂️ Climbing</li>
+  <li>📚 Reading (fantasy & science fiction)</li>
+  <li>🌊 Paddleboarding</li>
+  <li>🍕 Eating</li>
+  <li>🍳 Cooking</li>
+  <li>🕹 Video games</li>
+  <li>🧾 Writing (fantasy & science fiction)</li>
+</ul>

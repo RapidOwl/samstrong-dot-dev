@@ -12,6 +12,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(embedEverything);
+  eleventyConfig.addPlugin(require("./eleventy.config.drafts.js"));
+  eleventyConfig.addPlugin(require("./eleventy.config.images.js"));
 
   eleventyConfig.setDataDeepMerge(true);
 
@@ -78,6 +80,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("fonts");
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
@@ -107,6 +110,8 @@ module.exports = function (eleventyConfig) {
     ui: false,
     ghostMode: false,
   });
+
+  eleventyConfig.setServerOptions({ port: 8090 });
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
