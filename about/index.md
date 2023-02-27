@@ -9,7 +9,9 @@ eleventyNavigation:
 
 ## Who am I?
 
-<div class="text-center"><img src="/img/coffee-sipping.jpg" style="border-radius: 50%;" alt="" /></div>
+<div class="text-center round-image-wrapper">
+  {% image "../img/coffee-sipping.jpg" "Sam drinking coffee. The mug obscures the lower half of his face." %}
+</div>
 
 I'm a full-stack\* software developer and team lead based in Nottingham, England, with a passion for reducing friction in back-office applications, who mostly lives in the .Net and JavaScript worlds.
 

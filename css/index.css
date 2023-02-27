@@ -334,6 +334,10 @@ code[class*="language-"], pre[class*="language-"] {
   margin-left: 0;
 }
 
+.round-image-wrapper img {
+  border-radius: 50%;
+}
+
 @media (max-width: 732px) {
   main {
     width: 100%;

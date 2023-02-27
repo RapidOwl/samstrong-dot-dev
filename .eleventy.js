@@ -12,6 +12,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(embedEverything);
+  eleventyConfig.addPlugin(require("./eleventy.config.drafts.js"));
+  eleventyConfig.addPlugin(require("./eleventy.config.images.js"));
 
   eleventyConfig.setDataDeepMerge(true);
 
