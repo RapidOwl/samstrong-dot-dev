@@ -110,7 +110,6 @@ h1 {
 
 h2 {
   font-size: 2rem;
-
 }
 
 h3 {
@@ -140,7 +139,7 @@ h2, h3 {
   position: relative;
 }
 
-h2::before, h3::before {
+.tmpl-post h2::before, .tmpl-post h3::before {
   content: "";
   position: absolute;
   top: calc(100% + 2px);
@@ -150,21 +149,27 @@ h2::before, h3::before {
   opacity: 0;
 }
 
-h2::before {
+.tmpl-post h2::before {
   height: 5px;
   border-radius: 5px;
 }
 
-h3::before {
+.tmpl-post h3::before {
   height: 3px;
   border-radius: 3px;
   background: linear-gradient(90deg, var(--raspberry-pink-highlight), var(--mint-green) 75%);
 }
 
-h2.seen::before, h3.seen::before {
+.tmpl-post h2.seen::before, .tmpl-post h3.seen::before {
   opacity: 1;
   width: 100%;
   transition: all 0.75s ease-in-out;
+}
+
+/* Styles for the post list */
+.postlist .post-name {
+  font-size: 1.75rem;
+  font-weight: bold;
 }
 
 /* ## main-specific styles ## */
@@ -173,12 +178,14 @@ main li {
   margin: 0 0 8px 16px;
 }
 
+/* This is to hide the little hash anchor that appears after every heading */
 main h2 > a,
 main h3 > a {
   display: none;
   color: var(--chocolate-brown);
 }
 
+/* This is to show the little hash anchor when a user hovers */
 main h2:hover > a,
 main h3:hover > a {
   display: inline;
@@ -297,15 +304,15 @@ hr {
 .postlist > li {
   list-style: none;
   margin-left: 0;
-  margin-bottom: 32px;
-}
-
-.postlist p {
-  margin: 8px 0;
+  margin: 26px 0;
 }
 
 .postlist > li:last-child {
   margin-bottom: 0;
+}
+
+.postlist p {
+  margin: 8px 0;
 }
 
 .postlist h4 {
