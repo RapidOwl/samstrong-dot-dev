@@ -133,13 +133,16 @@ ul {
   padding: 0;
 }
 
-/* ## Styles for heading underlines ## */
+/* Styles for heading underlines */
 
 h2, h3 {
   position: relative;
 }
 
-.tmpl-post h2::before, .tmpl-post h3::before {
+.tmpl-post h2::before,
+.tmpl-post h3::before,
+.tmpl-page h2::before,
+.tmpl-page h3::before {
   content: "";
   position: absolute;
   top: calc(100% + 2px);
@@ -149,18 +152,23 @@ h2, h3 {
   opacity: 0;
 }
 
-.tmpl-post h2::before {
+.tmpl-post h2::before,
+.tmpl-page h2::before {
   height: 5px;
   border-radius: 5px;
 }
 
-.tmpl-post h3::before {
+.tmpl-post h3::before,
+.tmpl-page h3::before {
   height: 3px;
   border-radius: 3px;
   background: linear-gradient(90deg, var(--raspberry-pink-highlight), var(--mint-green) 75%);
 }
 
-.tmpl-post h2.seen::before, .tmpl-post h3.seen::before {
+.tmpl-post h2.seen::before,
+.tmpl-post h3.seen::before,
+.tmpl-page h2.seen::before,
+.tmpl-page h3.seen::before {
   opacity: 1;
   width: 100%;
   transition: all 0.75s ease-in-out;
@@ -172,7 +180,7 @@ h2, h3 {
   font-weight: bold;
 }
 
-/* ## main-specific styles ## */
+/* main-specific styles */
 
 main li {
   margin: 0 0 8px 16px;
@@ -254,6 +262,10 @@ section {
     0 11.2px 17.6px rgba(0, 0, 0, 0.119), 0 20.9px 33px rgba(0, 0, 0, 0.144),
     0 50px 79px rgba(0, 0, 0, 0.2);
 }
+
+/* section > * + * {
+  margin-block-start: 1.5rem;
+} */
 
 section::before {
   position: absolute;
