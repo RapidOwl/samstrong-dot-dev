@@ -19,5 +19,6 @@ templateClass: tmpl-post
 	{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
 	</ul> #}
 
-	{# <p class="text-center">Posted {{ date | readableDate }}</p> #}
+	<hr/>
+	<p class="text-center">Posted on {{ date | readableDate }}</p>
 </section>

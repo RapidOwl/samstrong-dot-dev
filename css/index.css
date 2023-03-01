@@ -31,6 +31,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -281,6 +282,12 @@ pre[class*="language-"] {
 
 code[class*="language-"], pre[class*="language-"] {
   background: var(--mint-green-highlight);
+}
+
+hr {
+  margin-top: 32px;
+  width: 68%;
+  border: 1px solid var(--raspberry-pink);
 }
 
 .eleventy-plugin-youtube-embed {
