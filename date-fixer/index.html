@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Fixer</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    main {
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    main>h1,
+    main>p {
+      text-align: center;
+    }
+
+    section {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    .output,
+    textarea {
+      font-family: monospace;
+      font-size: 12px;
+      padding: 8px;
+    }
+
+    .output {
+      background: lightblue;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Date Fixer</h1>
+    <p>
+      EventBrite downloads include dates in US format. This means if
+      you're in the UK, you then have a fun job trying to convert them to
+      something useful.
+    </p>
+    <p>
+      Excel makes this job inordinatetely difficult so here's a simple tool
+      that will convert those dates into two hopefully useful formats.
+    </p>
+    <section>
+      <div>
+        <label for="input">
+          <h2>Input</h2>
+        </label>
+        <textarea id="input" cols="30" rows="30"></textarea>
+      </div>
+      <div>
+        <h2>Long Date Format</h2>
+        <p class="output" id="bulkResultsLongDateFormat">Please input dates</p>
+      </div>
+      <div>
+        <h2>ISO Date Format</h2>
+        <p class="output" id="bulkResultsISODateFormat">Please input dates</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("input").addEventListener("input", function () {
+      var textarea = document.getElementById("input").value;
+      var lines = textarea.split("\n");
+      var bulkResultsLongDateFormat = document.getElementById("bulkResultsLongDateFormat");
+      var bulkResultsISODateFormat = document.getElementById("bulkResultsISODateFormat");
+
+      bulkResultsLongDateFormat.innerHTML = "";
+      bulkResultsISODateFormat.innerHTML = "";
+
+      for (var i = 0; i < lines.length; i++) {
+        var date = new Date(lines[i]);
+        var options = {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit"
+        };
+        bulkResultsLongDateFormat.innerHTML += date.toLocaleDateString("en-GB", options).replace(/,/g, "") + "<br/>";
+        bulkResultsISODateFormat.innerHTML += date.toISOString() + "<br/>";
+      }
+    });
+  </script>
+</body>
+
+</html>
