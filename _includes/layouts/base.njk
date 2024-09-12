@@ -24,7 +24,7 @@
                 {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
                 <ul class="nav">
                     <li class="site-title">
-                        <a href="/" aria-label="Home">{{ metadata.title }}</a>
+                        <a href="/" aria-label="Home">&#60;strong&#62;Sam&#60;/strong&#62;</a>
                     </li>
                     <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
                         {%- for entry in collections.all | eleventyNavigation %}
@@ -58,7 +58,7 @@
 
                 document.querySelectorAll('h2, h3').forEach((heading) => {
                     headingObserver.observe(heading);
-                });            
+                });
             });
         </script>
     </body>
