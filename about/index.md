@@ -63,19 +63,24 @@ Seek balance between work and relaxation, technology and art, busy work and crea
 
 Here are a list of job titles I have held that will mean a variety of things depending on who is reading this 😉.
 
+### System Loco
+
+- Senior Software Engineer (2025 - Present)
+
 ### UNiDAYS
 
-- Lead Software Developer (2019-Present)
-- Senior Software Developer (2016-2019)
+- Engineering Manager (April 2024 - December 2024)
+- Lead Software Developer (2019 - April 2024)
+- Senior Software Developer (2016 - 2019)
 
 ### The University of Nottingham
 
-- Senior Software Developer (2014-2016)
-- Analyst/Programmer (2006-2014)
+- Senior Software Developer (2014 - 2016)
+- Analyst/Programmer (2006 - 2014)
 
 ### Dendrite
 
-- Technical Developer (2000-2006)
+- Technical Developer (2000 - 2006)
 
 ## Other Interests
 
