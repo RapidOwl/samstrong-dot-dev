@@ -215,6 +215,7 @@ main p a,
 main li a {
   position: relative;
   color: var(--chocolate-brown);
+  display: inline-block;
 }
 
 main p a::before,
@@ -302,6 +303,17 @@ pre[class*="language-"] {
 code[class*="language-"], pre[class*="language-"] {
   background: var(--mint-green-highlight);
 }
+
+li > code, p > code {
+  font-size: 1rem;
+}
+
+/* li>code::before,
+p>code::before,
+li>code::after,
+p>code::after {
+  content: "`";
+} */
 
 hr {
   margin-top: 32px;
