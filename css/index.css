@@ -248,6 +248,8 @@ a[target="_blank"]::after {
 
 img {
   border: 4px solid var(--mint-green-highlight);
+  max-width: 100%;
+  height: auto;
 }
 
 section {
