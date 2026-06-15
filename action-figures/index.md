@@ -4,10 +4,6 @@ title: Sam's Action Figures
 templateClass: tmpl-page
 ---
 
-## Mummy's Alive - Hunter Ja-kal - **£10**
-
-{% image "./image.jpg", "Mummy's Alive - Hunter Ja-kal", true %}
-
 ## Witchblade - Sara Pezzini - Black - **£15**
 
 {% image "./image 1.jpg", "Witchblade - Sara Pezzini - Black", true %}
@@ -35,14 +31,6 @@ templateClass: tmpl-page
 ## McFarlane Toys - Techno Spawn - Cyber Spawn - **£15**
 
 {% image "./image 7.jpg", "McFarlane Toys - Techno Spawn - Cyber Spawn", true %}
-
-## McFarlane Toys - Movie Maniacs - Pumpkinhead - **£15**
-
-{% image "./image 8.jpg", "McFarlane Toys - Movie Maniacs - Pumpkinhead", true %}
-
-## Skeleton Legion - Skullcycle - **£15**
-
-{% image "./image 10.jpg", "Skeleton Legion - Skullcycle", true %}
 
 ## McFarlane Toys - The Curse - **£10**
 
@@ -75,10 +63,6 @@ templateClass: tmpl-page
 ## McFarlane Toys - Manga Spawn - Manga Curse - **£7.50**
 
 {% image "./image 18.jpg", "McFarlane Toys - Manga Spawn - Manga Curse", true %}
-
-## Preacher - 7 figure set - **£20**
-
-{% image "./image 19.jpg", "Preacher - 7 figure set", true %}
 
 ## McFarlane Toys - Mutant Spawn - **£10**
 
@@ -119,15 +103,3 @@ templateClass: tmpl-page
 ## McFarlane Toys - Curse of the Spawn - Raenius - **£15**
 
 {% image "./image 29.jpg", "McFarlane Toys - Curse of the Spawn - Raenius", true %}
-
-## McFarlane Toys - Tortured Souls - Agonistes - **£15**
-
-{% image "./image 30.jpg", "McFarlane Toys - Tortured Souls - Agonistes", true %}
-
-## McFarlane Toys - Sin City - Marv - **£10**
-
-{% image "./image 31.jpg", "McFarlane Toys - Sin City - Marv", true %}
-
-## McFarlane Toys - Movie Maniacs - Leatherface - **£15**
-
-{% image "./image 32.jpg", "McFarlane Toys - Movie Maniacs - Leatherface", true %}
