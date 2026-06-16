@@ -1,8 +1,45 @@
 ---
-layout: layouts/page.njk
+layout: layouts/blank.njk
 title: Sam's Action Figures
 templateClass: tmpl-page
 ---
+
+<style>
+  img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .toc {
+    margin: 0 0 24px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  .toc h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+  }
+
+  .toc ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  .toc li {
+    margin: 0 0 6px;
+  }
+</style>
+
+<h1>Sam's Action Figures</h1>
+
+<aside class="toc" aria-labelledby="toc-title">
+  <h2 id="toc-title">Contents</h2>
+  <ul id="toc-list"></ul>
+</aside>
 
 ## Witchblade - Sara Pezzini - Black - **£15**
 
@@ -103,3 +140,34 @@ templateClass: tmpl-page
 ## McFarlane Toys - Curse of the Spawn - Raenius - **£15**
 
 {% image "./image 29.jpg", "McFarlane Toys - Curse of the Spawn - Raenius", true %}
+
+<script>
+  (function () {
+    const tocList = document.getElementById("toc-list");
+    const tocTitle = document.getElementById("toc-title");
+    const headings = Array.from(document.querySelectorAll("h2")).filter(
+      (h) => h !== tocTitle
+    );
+
+    headings.forEach((heading) => {
+      if (!heading.id) {
+        heading.id = heading.textContent
+          .trim()
+          .toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, "")
+          .replace(/\s+/g, "-");
+      }
+
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = "#" + heading.id;
+      a.textContent = heading.textContent.replace('#', '').trim();
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+
+    if (!headings.length) {
+      tocList.innerHTML = "<li>No sections found.</li>";
+    }
+  })();
+</script>
