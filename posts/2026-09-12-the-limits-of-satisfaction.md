@@ -37,3 +37,5 @@ The limits of satisfaction keep shifting. Capital shifts them on purpose.
 Comfort, safety, health, joy.
 
 Keeping running little hamster.
+
+And buy those cute little things for your home.
