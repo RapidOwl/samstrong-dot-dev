@@ -83,7 +83,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy({ "robots/robots.txt": "/robots.txt" });
   eleventyConfig.addPassthroughCopy({
-    "src/calendar/year-3-autumn.ics": "calendar/year-3-autumn.ics",
+    "ical/year-3-autumn.ics": "ical/year-3-autumn.ics",
   });
 
   /* Markdown Overrides */
